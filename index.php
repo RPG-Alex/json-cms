@@ -11,7 +11,11 @@ include_once "controller/get_handler.php";
 //sets active directory globally for data
 $data_dir = APPROOT."/data/";
 
-include_once "tester.php";
+//include_once "tester.php";
 
 var_dump($_GET);
 var_dump($_POST);
+
+include_once "model/FileData.php";
+
+$FindMe = new FileData;
