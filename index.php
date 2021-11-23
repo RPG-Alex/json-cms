@@ -19,3 +19,15 @@ var_dump($_POST);
 include_once "model/FileData.php";
 
 $FindMe = new FileData;
+if ($FindMe->checkFileIsJson($data_dir."posts.json") === true) {
+  $data = $FindMe->getFileContentFromJson($data_dir."posts.json");
+}
+
+//This is just concept but this is how you access the POST content alex! its STD class so its like this. VIola.
+echo $data->Posts[0]->Title;
+
+echo $data->Posts[0]->Content;
+
+echo "<br>";
+
+include_once "tester.php";

@@ -6,8 +6,8 @@
   </head>
   <body>
     <form class="" action="" method="post">
-      <input type="text" name="username" value="">
-      <input type="password" name="password">
+      <input type="text" name="Title" value="">
+      <input type="text-box" name="Body">
       <input type="submit" name="" value="submitter">
     </form>
   </body>

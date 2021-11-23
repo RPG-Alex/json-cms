@@ -21,7 +21,27 @@ class FileData {
     }
     return $found;
   }
-  public function getFileContent($fileName){
+  public function checkFileIsJson($fileName){
+    //This funciton is simply used to verify that a file is json
+    $fileInfo = pathinfo($fileName);
+    if ($fileInfo['extension'] === 'json') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  public function getFileContentFromJson($fileName){
+      $content = file_get_contents($fileName);
+      return json_decode($content);
+  }
+  public function createNewJSONFile($input_data){
+    //need to work on this function. Currently it works. But need to work on it more
+    $json_data = json_encode($input_data);
+    try {
+      return file_put_contents($input_data['Title'].".json",$json_data);
+    } catch (\Exception $e) {
+      echo "Thats dog shit";
+    }
 
   }
 }
