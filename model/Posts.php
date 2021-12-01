@@ -1,6 +1,17 @@
 <?php
 class Posts extends FileData {
+  public function prepaerPost($newPostData) {
 
+  }
+  public function getLatestPostID($postsJson){
+    //This function will get the highest post ID, and iterate it by 1.
+    $lastID = max($postsJson->Posts->PostID);
+    var_dump($postsJson);
+    return $lastID++;
+  }
+  public function addPost($title,$id,$content){
+
+  }
 }
 
 

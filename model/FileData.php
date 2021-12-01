@@ -35,13 +35,8 @@ class FileData {
       return json_decode($content);
   }
   public function createNewJSONFile($input_data){
-    //need to work on this function. Currently it works. But need to work on it more
+    //need to work on this function. Currently it works. But need to work on it more. Catch functionality needs to be flusehd out. Also need to decide on the structure of data....
     $json_data = json_encode($input_data);
-    try {
-      return file_put_contents($input_data['Title'].".json",$json_data);
-    } catch (\Exception $e) {
-      echo "Thats dog shit";
-    }
-
+    return file_put_contents($input_data['Title'].".json",$json_data);
   }
 }
