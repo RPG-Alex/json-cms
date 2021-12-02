@@ -6,8 +6,9 @@
   </head>
   <body>
     <form class="" action="" method="post">
-      <input type="text" name="Title" value="">
-      <input type="text-box" name="Body">
+      <input type="text" name="title" value="">
+      <input type="text-box" name="content">
+      <input type="number" name="int">
       <input type="submit" name="" value="submitter">
     </form>
   </body>
