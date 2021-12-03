@@ -24,9 +24,9 @@ if ($FindMe->checkFileIsJson($data_dir."test.json") === true) {
 }
 
 //This is just concept but this is how you access the POST content alex! its STD class so its like this. VIola.
-echo ($data[0]->Content);
-
-
+//echo ($data[0]->Content);
+$harvey = $FindMe->getFileContentFromJson($data_dir."test.json");
+echo $chocka_con = $FindMe->getNewPostID($harvey);
 
 include_once "tester.php";
 include_once "model/Inputs.php";
