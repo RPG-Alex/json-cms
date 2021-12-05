@@ -22,17 +22,8 @@ $FindMe = new Posts;
 if ($FindMe->checkFileIsJson($data_dir."test.json") === true) {
   $data = $FindMe->getFileContentFromJson($data_dir."test.json");
 }
-
-//This is just concept but this is how you access the POST content alex! its STD class so its like this. VIola.
-//echo ($data[0]->Content);
-$harvey = $FindMe->getFileContentFromJson($data_dir."test.json");
-echo $chocka_con = $FindMe->getNewPostID($harvey);
+$test = $FindMe->preparePost("Lofi",12,"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+var_dump($test);
 
 include_once "tester.php";
-include_once "model/Inputs.php";
-//This needs to be added to the controller. This will be how data is accepted from a post and added to the stack of posts, before being placed into the updated file
-$data[] = [
-  'Title' => $_POST['title'],
-  'Content' => $_POST['content'],
-  'PostID' => 3
-];
+// include_once "model/Inputs.php";
