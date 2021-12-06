@@ -1,6 +1,5 @@
 <?php
 class Posts extends FileData {
-  private $FileData = new FileData;
   public function getLatestPostID(){
     //This function will get the highest post ID
     $postIDs = [];
@@ -32,9 +31,12 @@ class Posts extends FileData {
     return $json;
   }
   public function addPost($file,$newPost){
-    $isFile = $this->FileData->checkFileExists($file);
-    if ($isFile === true){
-      //This function will need to read the content from the file, then ammend the new post, and then insert this to the new file.
-    }
+    //Need to fix issues with encoding this to json
+    $originalData = file_get_contents($file);
+    $decode = $originalData;
+    $decode .=$newPost;
+    $encode = $decode;
+    //This function adds the content to the file. Still experimenting with
+    return file_put_contents($file,$encode,LOCK_EX);
   }
 }
