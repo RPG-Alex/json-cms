@@ -47,4 +47,3 @@ Furthermore, JSON-CMS follows the standard usage of JSON, making it well-prepare
 We welcome contributions to the JSON-CMS project! If you're interested in improving or adding new features, feel free to clone the repository and submit a pull request with your changes. Additionally, if you come across any issues or have suggestions, please open an issue. We appreciate your contributions and the growth of our community.
 
 <p align="center">[<a href="#readme-top">RETURN TO TOP</a>]</p>
-``
